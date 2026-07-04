@@ -63,8 +63,9 @@ In addition, we consider the proximal stochastic gradient (PSG) method from (Cut
 ### (1) Least-Squares Recovery
 We consider a least-squares recovery problem with distribution drift. 
 Specifically, this problem aims to recover a variable that follows a non-stationary distribution, based on observations following a Gaussian process with thime-varying mean.  
-Figs. below compares our SPF algorithm to the learning-based PDM and gradient-based PSG methods, using two performance metrics: (i) the optimality distance E∥xt − xt∗∥2, which measures how close the
-recovered solution xt is to the true target xt∗, and (ii) the objective suboptimality E|f(xt) − f(xt∗)|, which measures the difference between the objective evaluated at xt and the optimum f(xt∗)
+
+Figures below compares our SPF algorithm to the learning-based PDM and gradient-based PSG methods, using two performance metrics: (i) the optimality distance, which measures how close the
+recovered decision process is to the true target, and (ii) the objective suboptimality, which measures the difference between the objective evaluated at recovered process and the target objective.
 
 |Optimality distance  on the least-squares recovery problem |objective suboptimality  on the least-squares recovery problem|
 |:-------------------------:|:-------------------------:|
@@ -74,10 +75,11 @@ recovered solution xt is to the true target xt∗, and (ii) the objective subopt
 ### (2) Logistic Regression
 We now consider an ℓ_2-regularized logistic regression problem leveraged in (Cutler et al., 2023) with a random sequence of soft labels.
 
+Figures below illustrate the performance of the SPF algorithm compared with the learning-based PDM and gradient-based PSG methods in terms of the optimality distance and the objective suboptimality.
 
 |Optimality distance  on the  logistic regression problem |objective suboptimality  on the  logistic regression problem|
 |:-------------------------:|:-------------------------:|
-|  <img src="images/Regression1.png" alt="Alt Text" style="width:1000px;"> | <img src="images/Regression2.png" alt="Alt Text" style="width:1000px;"> | 
+|  <img src="images/Regression1.png" alt="Alt Text" style="width:1000px;"> | <img src="images/Regression2.png" alt="Alt Text" style="width:800px;"> | 
 |The SPF algorithm achieves a superior optimality distance relative to the PDM approach and performs comparably to the PDM method overall | The same pattern is observed for the objective suboptimality, where SPF demonstrates improved performance relative to the gradient-based PSG and comparable performance to the conventional learning-based PDM method|
 
 ## 🛠️ Dependencies
