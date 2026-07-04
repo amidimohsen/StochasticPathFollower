@@ -1,4 +1,4 @@
-# Stochastic Path Follower (SPF): Non-Parametric Optimization for Scalable Learning in Stochastic Decision Problems
+<img width="1839" height="286" alt="image" src="https://github.com/user-attachments/assets/3e006b0a-bc59-472c-9ed8-1b475f981769" /># Stochastic Path Follower (SPF): Non-Parametric Optimization for Scalable Learning in Stochastic Decision Problems
 
 ## 📑 Introduction
 
@@ -6,7 +6,7 @@
 Specifically, it considers a problem of the form
 $\min_{\mathbf{X}} \underset{ (\boldsymbol{\Xi}, \mathbf{x}) \sim \mathbb{P} \otimes \mathbb{Q} }{\mathbb{E}}  \{ f(\mathbf{x}_t, \boldsymbol{\xi}_t, t ) \} $, where the optimization is carried out jointly for every $t \in[0, T]$. 
 
-🎯 **SPF** addresses time-varying stochastic optimization (TV-SO) problems as the stochastic couterpart of conventional time-varying optimization challenges.
+🎯 **SPF** addresses time-varying stochastic optimization (TV-SO) problems as the stochastic couterpart of conventional time-varying optimization (TV-O) challenges [$\min_{\left(\mathbf{x}_t\right)_{t \in[0, T]}} f\left(\mathbf{x}_t, t\right), \quad \forall t \in[0, T],$].
  It finds non-parametric optimality conditions via Malliavin calculus. Its non-parametric framework provides a learning mechanism insensitive to the parameterization dimension, the challenge which most of the baselines such as adjoint sensitivity models and path-wise differentiation methods (PDMs) struggle with. <br>
 🎯 **SPF** provides a scalable neural algorithm for solving stochastic optimization challenges under distribution drift, and as such it is parallel to PDMs and adjoint sensitivity approaches, but far less sensitive to the parameterization dimension. <br>
 🎯 **SPF** is competitive with the baseline algorithms from both complexity and performance perspectives.
