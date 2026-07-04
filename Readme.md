@@ -1,6 +1,6 @@
 # Stochastic Path Follower (SPF): Non-Parametric Optimization for Scalable Learning in Stochastic Decision Problems
 
-## 📑 introduction
+## 📑 Introduction
 
 **SPF** (Stochastic Path Follower ) is a PyTorch implementation for solving (time-varying) stochastic optimization problems where distribution drift occurs or the environmnet is non-stationary.
 
