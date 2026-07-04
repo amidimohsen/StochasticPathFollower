@@ -66,7 +66,7 @@ Figures below illustrate the performance of the SPF algorithm compared with the 
 We evaluate the scalability of the SPF algorithm against the conventional learning-based method (PDM)  in a high-dimensional setup. First, we consider the least-squares recovery problem, vary the dimension of the NN parameterization, and measure the average time required to update the network parameters for one episode.
 
 Figure below presents the average runtime for the SPF and PDM algorithms. The run-time of SPF remains largely unaffected by the NN parameter dimension ϕ, while PDM exhibits a strong dependence on ϕ, resulting in significantly higher computational complexity. This difference can be understood by examining the structural distinction between the SPF and PDM algorithms. The SPF algorithm simulates n + n*n SDE. Hence, the dimensionality of the required SDEs is insensitive to the parameterization and does not involve differentiation with respect to it. In contrast, the PDM algorithm must simulate 
-both the original SDE and its variational counterpart, which together have a dimension of n + n * ϕ. Consequently, the dimension of the required SDEs scales directly with the parameterization dimension. These factors make the PDM approach inefficient for high-dimensional NNs.
+both the original SDE and its variational counterpart, which together have a dimension of $$n + n  \phi$$. Consequently, the dimension of the required SDEs scales directly with the parameterization dimension. These factors make the PDM approach inefficient for high-dimensional NNs.
 
 |Average runtime on the least-squares recovery problem for SPF and PDM|
 |:-------------------------:|
@@ -89,7 +89,6 @@ matplotlib
 
 ## 📚 How to cite our work
 
-This repository accompanies:
 Mohsen Amidzadeh, Lauri Viitasaari, Mario Di Francesco, "Non-Parametric Optimization for Scalable Learning in Stochastic Decision Problems", ICML, 2026.🔗 https://openreview.net/forum?id=rD79qEJ5iR
 ```
 @article{
