@@ -66,25 +66,19 @@ Specifically, this problem aims to recover a variable that follows a non-station
 Figs. below compares our SPF algorithm to the learning-based PDM and gradient-based PSG methods, using two performance metrics: (i) the optimality distance E∥xt − xt∗∥2, which measures how close the
 recovered solution xt is to the true target xt∗, and (ii) the objective suboptimality E|f(xt) − f(xt∗)|, which measures the difference between the objective evaluated at xt and the optimum f(xt∗)
 
-|Obtained Pareto-set of FB-MOAC for edge-caching experiment |Obtained Pareto-set of FB-MOAC for edge-caching experiment |
+|Optimality distance  on the least-squares recovery problem |objective suboptimality  on the least-squares recovery problem|
 |:-------------------------:|:-------------------------:|
 |  <img src="images/Recovery1.png" alt="Alt Text" style="width:1000px;"> | <img src="images/Recovery2.png" alt="Alt Text" style="width:1000px;"> | 
+|Although the PDM algorithm achieves an optimality distance close to that of SPF, the SPF method outperforms both PDM and PSG | The same trend holds for objective suboptimality, where SPF exhibits 
+the lowest error among the learning-based and gradient-based approaches |
+
+### (2) Logistic Regression
+We now consider an ℓ_2-regularized logistic regression problem leveraged in (Cutler et al., 2023) with a random sequence of soft labels.
 
 
-### (2) Computation-Offloading  Experiment
-please refer to the Readme file inthe environment folder to see a brief explanation for this experiment. 
-Full details are given in the paper. 
-
-
-| Performance of solution of FB-MOAC for computation offloading experiment  | Histogram of solution of FB-MOAC for computation offloading experiment  |
-| :-------------------------:|:-------------------------:|
-|  <img src="images/Results/performance-offload-fb-moac.png" alt="Alt Text" style="width:400px;"> | <img src="images/Results/offload-fb-moac.png" alt="Alt Text" style="width:400px;"> |
-|The optimality distance E∥xt − xt∗∥2  for the considered approaches on the least-squares recovery problem | The objective suboptimality E|f(xt) − f(xt∗)|  for the considered approaches on the least-squares recovery problem |
-
-| Comparison of solution of F-PPO for computation offloading experiment  | Comparison of solution of F-MOAC for computation offloading experiment  |
-| :-------------------------:|:-------------------------:|
-|  <img src="images/Results/offload-f-ppo.png" alt="Alt Text" style="width:400px;"> |  <img src="images/Results/offload-f-moac.png" alt="Alt Text" style="width:400px;"> | 
-
+|Optimality distance  on the least-squares recovery problem |objective suboptimality  on the least-squares recovery problem|
+|:-------------------------:|:-------------------------:|
+|  <img src="images/Regression1.png" alt="Alt Text" style="width:1000px;"> | <img src="images/Regression2.png" alt="Alt Text" style="width:1000px;"> | 
 
 
 ## 🛠️ Dependencies
