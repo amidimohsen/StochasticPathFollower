@@ -79,7 +79,7 @@ Figures below illustrate the performance of the SPF algorithm compared with the 
 
 |Optimality distance  on the  logistic regression problem |Objective suboptimality  on the  logistic regression problem|
 |:-------------------------:|:-------------------------:|
-|  <img src="images/Regression1.png" alt="Alt Text" style="width:1400px;"> | <img src="images/Regression2.png" alt="Alt Text" style="width:700px;"> | 
+|  <img src="images/Regression1.png" alt="Alt Text" style="width:1400px;"> | <img src="images/Regression2.png" alt="Alt Text" style="width:650px;"> | 
 |The SPF algorithm achieves a superior optimality distance relative to the PDM approach and performs comparably to the PDM method overall | The same pattern is observed for the objective suboptimality, where SPF demonstrates improved performance relative to the gradient-based PSG and comparable performance to the conventional learning-based PDM method|
 
 ## 🛠️ Dependencies
