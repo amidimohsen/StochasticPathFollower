@@ -87,7 +87,7 @@ Graphs
 matplotlib
 ```
 
-## 📚 Reference
+## 📚 How to cite our work
 
 This repository accompanies:
 Mohsen Amidzadeh, Lauri Viitasaari, Mario Di Francesco, "Non-Parametric Optimization for Scalable Learning in Stochastic Decision Problems", ICML, 2026.🔗 https://openreview.net/forum?id=rD79qEJ5iR
@@ -101,3 +101,10 @@ year={2026},
 url={https://openreview.net/forum?id=rD79qEJ5iR},
 }
 ```
+
+## 📚 Reference
+Tzen, B. and Raginsky, M. Neural stochastic differential equations: Deep latent gaussian models in the diffusion limit.
+arXiv preprint arXiv:1905.09883, 2019.
+
+Cutler, J., Drusvyatskiy, D., and Harchaoui, Z. Stochastic optimization under distributional drift. Journal of Machine
+Learning Research, 24(147):1–56, 2023.
