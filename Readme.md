@@ -52,7 +52,7 @@ recovered decision process is to the true target, and (ii) the objective subopti
 |Although the PDM algorithm achieves an optimality distance close to that of SPF, the SPF method outperforms both PDM and PSG | The same trend holds for objective suboptimality, where SPF exhibits the lowest error among the learning-based and gradient-based approaches |
 
 ### (2) Logistic Regression
-We now consider an ℓ_2-regularized logistic regression problem leveraged in (Cutler et al., 2023) with a random sequence of soft labels.
+We now consider an $\ell^2_2$-regularized logistic regression problem leveraged in (Cutler et al., 2023) with a random sequence of soft labels.
 
 Figures below illustrate the performance of the SPF algorithm compared with the learning-based PDM and gradient-based PSG methods in terms of the optimality distance and the objective suboptimality.
 
@@ -65,7 +65,7 @@ Figures below illustrate the performance of the SPF algorithm compared with the 
 
 We evaluate the scalability of the SPF algorithm against the conventional learning-based method (PDM)  in a high-dimensional setup. First, we consider the least-squares recovery problem, vary the dimension of the NN parameterization, and measure the average time required to update the network parameters for one episode.
 
-Figure below presents the average runtime for the SPF and PDM algorithms. The run-time of SPF remains largely unaffected by the NN parameter dimension $\phi$, while PDM exhibits a strong dependence on $\phi$, resulting in significantly higher computational complexity. This difference can be understood by examining the structural distinction between the SPF and PDM algorithms. The SPF algorithm simulates n + n*n SDE. Hence, the dimensionality of the required SDEs is insensitive to the parameterization and does not involve differentiation with respect to it. In contrast, the PDM algorithm must simulate 
+Figure below presents the average runtime for the SPF and PDM algorithms. The run-time of SPF remains largely unaffected by the NN parameter dimension $\phi$, while PDM exhibits a strong dependence on $\phi$, resulting in significantly higher computational complexity. This difference can be understood by examining the structural distinction between the SPF and PDM algorithms. The SPF algorithm simulates $n + n^2$ SDE. Hence, the dimensionality of the required SDEs is insensitive to the parameterization and does not involve differentiation with respect to it. In contrast, the PDM algorithm must simulate 
 both the original SDE and its variational counterpart, which together have a dimension of $n + n  \phi$. Consequently, the dimension of the required SDEs scales directly with the parameterization dimension. These factors make the PDM approach inefficient for high-dimensional NNs.
 
 |Average runtime on the least-squares recovery problem for SPF and PDM|
