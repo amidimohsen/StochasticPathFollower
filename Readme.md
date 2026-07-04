@@ -56,21 +56,19 @@ A pseudo-code of the SPF algorithm is provided below.
 
 
 ## 📈  Results
-Foe the comparison purposes, we consider two baseline algorithms, namely **PPO** and a **multi-objective actor-critic (MOAC)**. However, to be able to use these algorithms, which are not designed for forward-backward MDPs, we modified the respective problems by replacing the backward reward(s) with a related one(s) (for fairness) so that the backward MDP can be safely removed. Figures below show both the performance of FB-MDP and its comparison with  **PPO** (called F-PPO) and the **multi-objective actor-critic** (called F-MOAC).
+We consider several algorithms from the literature as baselines for comparison. As a learning-based approach, we adopt the pathwise differentiation method (PDM) (Tzen & Raginsky, 2019; Liu et al., 
+2019). PDM can be used for joint optimization over the entire time horizon, which is needed for a time-varying optimization problem. 
+In addition, we consider the proximal stochastic gradient (PSG) method from (Cutler et al., 2023) as a gradient-based baseline. This algorithm addresses convex optimization problems under distribution drift and is a stochastic gradient descent methods. PSG tracks the optimal decision process by using a stochastic algorithm with iterate averaging.
 
-### (1) Edge-Cahing  Experiment.
-please refer to the Readme file in the environment folder to see a brief explanation for this experiment. 
-Full details are given in the paper. 
+### (1) Least-Squares Recovery
+We consider a least-squares recovery problem with distribution drift. 
+Specifically, this problem aims to recover a variable that follows a non-stationary distribution, based on observations following a Gaussian process with thime-varying mean.  
+Figs. below compares our SPF algorithm to the learning-based PDM and gradient-based PSG methods, using two performance metrics: (i) the optimality distance E∥xt − xt∗∥2, which measures how close the
+recovered solution xt is to the true target xt∗, and (ii) the objective suboptimality E|f(xt) − f(xt∗)|, which measures the difference between the objective evaluated at xt and the optimum f(xt∗)
 
-|Obtained Pareto-set of FB-MOAC for edge-caching experiment |
-|:-------------------------:|
-|  <img src="images/Results/multiobjective_comparison_preferences.png" alt="Alt Text" style="width:1000px;"> | 
-
-
-| Training Comparison of FB-MOAC against PPO and MOAC (a multi-objective A2C) | Comparison of Final Solutions of FB-MOAC against PPO and MOAC (a multi-objective A2C) | 
-| :-------------------------:|:-------------------------:|
-|  <img src="images/Results/FBMOAC_FA2C_PPO.png" alt="Alt Text" style="width:400px;"> |  <img src="images/Results/test-multicast1.png" alt="Alt Text" style="width:400px;"> | 
-
+|Obtained Pareto-set of FB-MOAC for edge-caching experiment |Obtained Pareto-set of FB-MOAC for edge-caching experiment |
+|:-------------------------:|:-------------------------:|
+|  <img src="images/Results/multiobjective_comparison_preferences.png" alt="Alt Text" style="width:1000px;"> | <img src="images/Results/multiobjective_comparison_preferences.png" alt="Alt Text" style="width:1000px;"> | 
 
 
 ### (2) Computation-Offloading  Experiment
