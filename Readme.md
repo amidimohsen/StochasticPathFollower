@@ -12,7 +12,7 @@
 ## ⚙️ Overview of the SPF algotithm:
 SPF consists of three main phases as follows.
 
-** (i) Forward pass.** Simulate a neural SDE, with drift and diffusion functions, to obtain the stochastic paths of decision process. In addition, compute the Malliavin derivatives of the decisoin process.
+**(i) Forward pass.** Simulate a neural SDE, with drift and diffusion functions, to obtain the stochastic paths of decision process. In addition, compute the Malliavin derivatives of the decisoin process.
 
 **(ii)  Loss evaluation.** Compute an energy-functional loss associated with the considered TV-SO problem.
 
