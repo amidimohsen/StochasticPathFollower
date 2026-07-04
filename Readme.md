@@ -97,11 +97,6 @@ PyTorch
 NumPy
 scipy.special
 ```
-Training Environments 
-```
-Edge-caching
-Computation-offloading
-```
 Graphs
 ```
 matplotlib
@@ -114,11 +109,10 @@ Mohsen Amidzade, Mario Di Francesco, "FB‑MOAC: Forward–Backward Multi‑Obje
 ```
 @article{
 amidzadeh2025fbmoac,
-title={{FB}-{MOAC}: A Reinforcement Learning Algorithm for Forward-Backward Markov Decision Processes},
-author={Mohsen Amidzadeh and Mario Di Francesco},
-journal={Transactions on Machine Learning Research},
-issn={2835-8856},
-year={2025},
-url={https://openreview.net/forum?id=li5DyC6rfS},
+title={Non-Parametric Optimization for Scalable Learning in Stochastic Decision Problems},
+author={Mohsen Amidzadeh, Lauri Viitasaari, Mario Di Francesco},
+journal={International  Conference on Machine Learning (ICML)},
+year={2026},
+url={https://openreview.net/forum?id=rD79qEJ5iR},
 }
 ```
