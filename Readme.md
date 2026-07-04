@@ -4,7 +4,7 @@
 
 **SPF** (Stochastic Path Follower ) is a PyTorch implementation for solving (time-varying) stochastic optimization problems when a distribution drift occurs or the respective environmnet is non-stationary.
 Specifically, it considers a problem of the form
-$\min_{\mathbf{X}} \underset{(\boldsymbol{\Xi}, \mathbf{x}) \sim \mathbb{P} \otimes \mathbb{Q}}{\mathbb{E}} \{ f\left(\mathbf{x}_t, \boldsymbol{\xi}_t, t ) \},$
+$\min_{\mathbf{X}} \underset{ (\boldsymbol{\Xi}, \mathbf{x}) \sim \mathbb{P} \otimes \mathbb{Q} }_{\mathbb{E}} \{ f\left(\mathbf{x}_t, \boldsymbol{\xi}_t, t ) \},$
 
 where the optimization is carried out jointly for every $t \in[0, T]$. Note that minimizing the aggregated objective $\int_0^t\left|\mathbb{E} f\left(\mathbf{x}_t, \boldsymbol{\xi}_t, t\right)\right| d t$ does not, in general, yield the desired solution, since the minimizer of $\mathbb{E} f\left(\mathbf{x}_t, \boldsymbol{\xi}_t, t\right)$ may change sign at different time instances.
 
