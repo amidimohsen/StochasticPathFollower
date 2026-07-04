@@ -26,33 +26,12 @@ A pseudo-code of the SPF algorithm is provided below.
 
 
 ## 🧪 Usage
-- To train the RL agent on a FB-MDP: run `train.py`
-- To test a preTrained network : run `test.py`
+This repository provides the python implementaions for two stochastic optimization problems, namely least squares recovey and loggistic regression, both under distribution drift.
+It also provides codes of two baselines for the benchmark purposes, namely (i) pathwise-differentiaion method (PDM), as the conventoial neural approach for optimizing neural SDE and the proximal stochastic gradient (PSG) method as a gradient-based baseline.
 
   ### Experiments:
-  Notice that current (standard) RL baselines/experiments are not applicable to forward-backward MDPs. Hence, we go beyond them to assess our algorithm on real-world problems characterized by FB-MDPs.
-  For this, we have provided two large-scale experiments falling within FB-MDP frameworks.
-  The first experiment is a edge-cashing problem in the context of communication networkings,
-  and the second experiment is a computation offloading problem in the domain of cloud computing systems. 
-  These experiments are provided in the folder [*experiment*]. Moreover, there is a [Readme] in that folder that explains these experiments and thier hyper-parameters.
-
-  For the edge caching experiment, please uncomment the syntax **from environments.EdgeCaching import NetEnv** and for the computation odffloading experiment uncomment the syntax **from environments.ComputationOffloading import NetEnv**
-  in the train.py or test.py.
-
-### 🔧 Algorithm hyperparameters:
--    **Print_freq**        :                        The frequency based on which the training results should be printed. (after how many episodes).
- -   **Save_model_freq**    :                       The frequencyt based on which  the parameters of model should be saved.
-  -  **AverageFrequency**   :                       The frequency based on which  the cumulative rewards should be averagd for the printing and logging purposes.
-  -  **N_MCS**             :                        Number of Monte-Carlo Samples for the *episodic MCS-average* add-on.
-   - **EpisodeNumber**   :                          Number of training episodes.
-  -  **TimeSlots**         :                        Number of time-steps in each episode.
-   - **LearningRate**    :                          Learning-Rate of the FB-MOAC algorithm, for *multi-objective actor* and *forward/backward critics*.
-   - **SmoothingFactor** :                          The smoothing factor of the episodic MCS-average  add-on.
-  -  **DiscountFactor**   :                         Discount-factor related to the cumulative rewards.
-  -  **PreferenceCoeff**                            Preference parameter, for forward and backward rewards, to extract a Pareto-front. (e.g. for a problem with 2 forward rewards and one backward one, one may set PreferenceCoeff = torch.tensor([p1, p2, p3]) which means that forward rewards have p1 and p2 preferences and backward reward has p3. )
-
-##### Note :
-  - For each environment, the hyper-parameters need fine-tuning. FB-MOAC can also be used for forward-only multi-objective MDP problems.
+  
+  Please refer to the respective folders to find the implementations of the SPF and the baselines for the least squares recovey and loggistic regression problems.
 
 
 ## 📈  Results
