@@ -19,10 +19,10 @@ SPF consists of three main phases as follows.
 **(iii)  Parameter update.** Update the parameters of the neural drift and diffusion functions  using an Adam-type optimizer.
 
 A pseudo-code of the SPF algorithm is provided below.
-|  Diagram of FB-MOAC algorithm |
+|  Diagram of SPF algorithm |
 | :-------------------------:| 
 |  <img src="images/SPF.png" alt="Alt Text" style="width:400px;">  |  
-| The pseudo-code of the SPF algorithm |
+|  |
 
 
 ## 🧪 Usage
