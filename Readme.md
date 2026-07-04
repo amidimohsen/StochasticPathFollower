@@ -75,7 +75,7 @@ both the original SDE and its variational counterpart, which together have a dim
 
 
 ## 🛠️ Dependencies
-Trained and Tested on:
+Tested on:
 ```
 Python 3.11
 PyTorch
