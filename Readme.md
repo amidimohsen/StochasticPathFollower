@@ -43,7 +43,7 @@ In addition, we consider the proximal stochastic gradient (PSG) method from (Cut
 We consider a least-squares recovery problem with distribution drift. 
 Specifically, this problem aims to recover a variable that follows a non-stationary distribution, based on observations following a Gaussian process with thime-varying mean.  
 
-Figures below compares our SPF algorithm to the learning-based PDM and gradient-based PSG methods, using two performance metrics: (i) the optimality distance, which measures how close the
+Figures below compare our SPF algorithm to the learning-based PDM and gradient-based PSG methods, using two performance metrics: (i) the optimality distance, which measures how close the
 recovered decision process is to the true target, and (ii) the objective suboptimality, which measures the difference between the objective evaluated at recovered process and the target objective.
 
 |Optimality distance  on the least-squares recovery problem |Objective suboptimality  on the least-squares recovery problem|
@@ -60,6 +60,19 @@ Figures below illustrate the performance of the SPF algorithm compared with the 
 |:-------------------------:|:-------------------------:|
 |  <img src="images/Regression1.png" alt="Alt Text" style="width:1500px;"> | <img src="images/Regression2.png" alt="Alt Text" style="width:600px;"> | 
 |The SPF algorithm achieves a superior optimality distance relative to the PDM approach and performs comparably to the PDM method overall | The same pattern is observed for the objective suboptimality, where SPF demonstrates improved performance relative to the gradient-based PSG and comparable performance to the conventional learning-based PDM method|
+
+### (3) Scalability Benchamrk
+
+We evaluate the scalability of the SPF algorithm against the conventional learning-based method (PDM)  in a high-dimensional setup. First, we consider the least-squares recovery problem, vary the dimension of the NN parameterization, and measure the average time required to update the network parameters for one episode.
+
+Figure below, in the left hand side, presents the average runtime for the SPF and PDM algorithms. The run-time of SPF remains largely unaffected by the NN parameter dimension ϕ, while PDM exhibits a strong dependence on ϕ, resulting in significantly higher computational complexity. This difference can be understood by examining the structural distinction between the SPF and PDM algorithms. The SPF algorithm simulates n + n*n SDE. Hence, the dimensionality of the required SDEs is insensitive to the parameterization and does not involve differentiation with respect to it. In contrast, the PDM algorithm must simulate 
+both the original SDE and its variational counterpart, which together have a dimension of n + n * ϕ. Consequently, the dimension of the required SDEs scales directly with the parameterization dimension. These factors make the PDM approach inefficient for high-dimensional NNs.
+
+|Average runtime on the least-squares recovery problem for SPF and PDM|
+|:-------------------------:|
+|  <img src="images/Runtime.png" alt="Alt Text" style="width:1000px;"> | 
+|The SPF algorithm is mainly insensitive to the parameterization dimension of the considered neural network |
+
 
 ## 🛠️ Dependencies
 Trained and Tested on:
