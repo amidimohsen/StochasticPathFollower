@@ -21,7 +21,7 @@ SPF consists of three main phases as follows.
 A pseudo-code of the SPF algorithm is provided below.
 |  Diagram of SPF algorithm |
 | :-------------------------:| 
-|  <img src="images/SPF.png" alt="Alt Text" style="width:400px;">  |  
+|  <img src="images/SPF.png" alt="Alt Text" style="width:600px;">  |  
 |  |
 
 
