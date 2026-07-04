@@ -17,11 +17,12 @@ SPF consists of three main phases as follows.
 **(ii)  Loss evaluation.** Compute an energy-functional loss associated with the considered TV-SO problem.
 
 **(iii)  Parameter update.** Update the parameters of the neural drift and diffusion functions  using an Adam-type optimizer.
+
 A pseudo-code of the SPF algorithm is provided below.
 |  Diagram of FB-MOAC algorithm |
 | :-------------------------:| 
 |  <img src="images/SPF.png" alt="Alt Text" style="width:400px;">  |  
-| THe pseudo-code of the SPF algorithm |
+| The pseudo-code of the SPF algorithm |
 
 
 ## 🧪 Usage
