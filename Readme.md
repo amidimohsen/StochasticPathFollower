@@ -40,7 +40,7 @@ We consider several algorithms from the literature as baselines for comparison. 
 In addition, we consider the proximal stochastic gradient (PSG) method from (Cutler et al., 2023) as a gradient-based baseline. This algorithm addresses convex optimization problems under distribution drift and is a stochastic gradient descent methods. PSG tracks the optimal decision process by using a stochastic algorithm with iterate averaging.
 
 ### (1) Least-Squares Recovery
-We consider a least-squares recovery problem with distribution drift. 
+We consider a least-squares recovery problem with distribution drift utilized in (Cutler et al., 2023; Maity et al., 2023). 
 Specifically, this problem aims to recover a variable that follows a non-stationary distribution, based on observations following a Gaussian process with thime-varying mean.  
 
 Figures below compare our SPF algorithm to the learning-based PDM and gradient-based PSG methods, using two performance metrics: (i) the optimality distance, which measures how close the
@@ -103,8 +103,12 @@ url={https://openreview.net/forum?id=rD79qEJ5iR},
 ```
 
 ## 📚 Reference
-Tzen, B. and Raginsky, M. Neural stochastic differential equations: Deep latent gaussian models in the diffusion limit.
-arXiv preprint arXiv:1905.09883, 2019.
 
 Cutler, J., Drusvyatskiy, D., and Harchaoui, Z. Stochastic optimization under distributional drift. Journal of Machine
 Learning Research, 24(147):1–56, 2023.
+
+Maity, S., Mukherjee, D., Banerjee, M., and Sun, Y. Predictor-corrector algorithms for stochastic optimization under gradual
+distribution shift. In International Conference on Learning Representations (ICLR) 2023, 2023.
+
+Tzen, B. and Raginsky, M. Neural stochastic differential equations: Deep latent gaussian models in the diffusion limit.
+arXiv preprint arXiv:1905.09883, 2019.
