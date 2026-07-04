@@ -4,20 +4,22 @@
 
 **SPF** (Stochastic Path Follower ) is a PyTorch implementation for solving (time-varying) stochastic optimization problems where distribution drift occurs or the environmnet is non-stationary.
 
-🎯 **SPF** addresses time-varying stochastic optimization problems as the stochastic couterpart of conventional time-varying optimization challenges. <br>
-🎯 **SPF** is a scalable neural algorithm for solving stochastic optimization challenges under distribution drift, and as such it is parallel to PDMs and adjoint sensitivity approaches, but far less sensitive to the parameterization dimension.<br>
-🎯 **SPF** shows a convegence rate similar to RL algorithms developed for merely forward MDPs.
+🎯 **SPF** addresses time-varying stochastic optimization (TV-SO) problems as the stochastic couterpart of conventional time-varying optimization challenges.
+ It finds non-parametric optimality conditions via Malliavin calculus. Its non-parametric framework provides a learning mechanism insensitive to the parameterization dimension, the challenge which most of the baselines such as adjoint sensitivity models and path-wise differentiation methods (PDMs) struggle with. <br>
+🎯 **SPF** provides a scalable neural algorithm for solving stochastic optimization challenges under distribution drift, and as such it is parallel to PDMs and adjoint sensitivity approaches, but far less sensitive to the parameterization dimension. <br>
+🎯 **SPF** is competitive with the baseline algorithms from both complexity and performance perspectives.
 
-## ⚙️ Overview of the algotithm:
-FB-MOAC comprises three steps: (i) **forward evaluation**, in which the forward dynamics is evaluated by generating actions 
-using a policy $\pi(\cdot | {s}_t)$, (ii) **backward evaluation**, in which the backward dynamics is evaluated in a time-reversed way 
-by leveraging the actions generated in the previous step;
-and (iii) **bidirectional learning**, employing a multi-objective optimization mechanism **with a suitable chronological order** 
-to optimize the policy $\pi(\cdot | {s}_t)$ based on the experiences obtained from both the forward and backward dynamics. <br>
-The diagram of FB-MOAC algorithm is shown below.
-|  Diagram of FB-MOAC algorithm |  Forward-Backward Multi-Objective Optimization of FB-MOAC  |
-| :-------------------------:| :-------------------------:|
-|  <img src="images/fwbw-moac-1.png" alt="Alt Text" style="width:400px;">  |  <img src="images/fwbw-moac-2.png" alt="Alt Text" style="width:300px;"> |
+## ⚙️ Overview of the SPF algotithm:
+SPF consists of three main phases as follows.
+**Forward pass.** Simulate a neural SDE, with drift and diffusion functions, to obtain the stochastic paths of decision process. In addition, compute the Malliavin derivatives of the decisoin process.
+
+**Loss evaluation.** Compute an energy-functional loss associated with the considered TV-SO problem.
+
+**Parameter update.** Update the parameters of the neural drift and diffusion functions  using an Adam-type optimizer.
+A pseudo-code of the SPF algorithm is provided below.
+|  Diagram of FB-MOAC algorithm |
+| :-------------------------:| 
+|  <img src="images/SPF.png" alt="Alt Text" style="width:400px;">  |  
 | The FB-MOAC algorithm consists **forward evaluation**, **backward evaluation** and **bidirectional learning** steps. During the first two steps, the forward and backward dynamics are evaluated, using forward/backward critics, and the resulting experiences are buffered. By a proper chronological order, the policy distribution is optimized in the bidirectional learning step based on the experiences of both forward and backward dynamics and using a **forward-backward multi-objective learning**. The algorithm is additionally equipped with an add-on **episodic MCS-average** to boost the convergence to Pareto-optimal solutions. | This step first computes the vector-valued gradients of forward and backward objectives, then compute the descent direction q(\.) to ensure that all rewards increase simultaneously,  and finally update the parameters of actor network based on q(.).|
 
 
