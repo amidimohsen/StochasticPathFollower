@@ -105,10 +105,10 @@ matplotlib
 ## 📚 Reference
 
 This repository accompanies:
-Mohsen Amidzade, Mario Di Francesco, "FB‑MOAC: Forward–Backward Multi‑Objective Actor‑Critic", TMLR, 2025.🔗 https://openreview.net/forum?id=li5DyC6rfS
+Mohsen Amidzadeh, Lauri Viitasaari, Mario Di Francesco, "Non-Parametric Optimization for Scalable Learning in Stochastic Decision Problems", ICML, 2026.🔗 https://openreview.net/forum?id=rD79qEJ5iR
 ```
 @article{
-amidzadeh2025fbmoac,
+amidzadeh2026NonparametricStochasticOptimization,
 title={Non-Parametric Optimization for Scalable Learning in Stochastic Decision Problems},
 author={Mohsen Amidzadeh, Lauri Viitasaari, Mario Di Francesco},
 journal={International  Conference on Machine Learning (ICML)},
