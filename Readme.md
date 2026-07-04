@@ -68,7 +68,7 @@ recovered solution xt is to the true target xt∗, and (ii) the objective subopt
 
 |Obtained Pareto-set of FB-MOAC for edge-caching experiment |Obtained Pareto-set of FB-MOAC for edge-caching experiment |
 |:-------------------------:|:-------------------------:|
-|  <img src="images/Results/multiobjective_comparison_preferences.png" alt="Alt Text" style="width:1000px;"> | <img src="images/Results/multiobjective_comparison_preferences.png" alt="Alt Text" style="width:1000px;"> | 
+|  <img src="images/Recovery1.png" alt="Alt Text" style="width:1000px;"> | <img src="images/Recovery2.png" alt="Alt Text" style="width:1000px;"> | 
 
 
 ### (2) Computation-Offloading  Experiment
