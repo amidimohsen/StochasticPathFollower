@@ -4,7 +4,7 @@
 Specifically, it considers a problem of the form
 $\min_{\mathbf{X}} \underset{ (\boldsymbol{\Xi}, \mathbf{x}) \sim \mathbb{P} \otimes \mathbb{Q} }{\mathbb{E}}  \{ f(\mathbf{x}_t, \boldsymbol{\xi}_t, t ) \} $, where the optimization is carried out jointly for every $t \in[0, T]$. 
 
-🎯 **SPF** addresses time-varying stochastic optimization (TV-SO) problems as the stochastic couterpart of conventional time-varying optimization (TV-O) challenges ($\min f(\mathbf{x}_t, t), ~t \in [0, T]$).
+🎯 **SPF** addresses time-varying stochastic optimization (TV-SO) problems as the stochastic couterpart of conventional time-varying optimization (TV-O) challenges ($\min f(\mathbf{x}_t, t), ~\forall t \in [0, T]$).
  It finds non-parametric optimality conditions via Malliavin calculus. Its non-parametric framework provides a learning mechanism insensitive to the parameterization dimension, the challenge which most of the baselines such as adjoint sensitivity models and path-wise differentiation methods (PDMs) struggle with. <br>
 🎯 **SPF** provides a scalable neural algorithm for solving stochastic optimization challenges under distribution drift, and as such it is parallel to PDMs and adjoint sensitivity approaches, but far less sensitive to the parameterization dimension. <br>
 🎯 **SPF** is competitive with the baseline algorithms from both complexity and performance perspectives.
