@@ -79,7 +79,7 @@ Full details are given in the paper.
 | Performance of solution of FB-MOAC for computation offloading experiment  | Histogram of solution of FB-MOAC for computation offloading experiment  |
 | :-------------------------:|:-------------------------:|
 |  <img src="images/Results/performance-offload-fb-moac.png" alt="Alt Text" style="width:400px;"> | <img src="images/Results/offload-fb-moac.png" alt="Alt Text" style="width:400px;"> |
-
+|The optimality distance E∥xt − xt∗∥2  for the considered approaches on the least-squares recovery problem | The objective suboptimality E|f(xt) − f(xt∗)|  for the considered approaches on the least-squares recovery problem |
 
 | Comparison of solution of F-PPO for computation offloading experiment  | Comparison of solution of F-MOAC for computation offloading experiment  |
 | :-------------------------:|:-------------------------:|
