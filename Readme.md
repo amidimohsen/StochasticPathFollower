@@ -11,11 +11,12 @@
 
 ## ⚙️ Overview of the SPF algotithm:
 SPF consists of three main phases as follows.
-**Forward pass.** Simulate a neural SDE, with drift and diffusion functions, to obtain the stochastic paths of decision process. In addition, compute the Malliavin derivatives of the decisoin process.
 
-**Loss evaluation.** Compute an energy-functional loss associated with the considered TV-SO problem.
+** (i) Forward pass.** Simulate a neural SDE, with drift and diffusion functions, to obtain the stochastic paths of decision process. In addition, compute the Malliavin derivatives of the decisoin process.
 
-**Parameter update.** Update the parameters of the neural drift and diffusion functions  using an Adam-type optimizer.
+**(ii)  Loss evaluation.** Compute an energy-functional loss associated with the considered TV-SO problem.
+
+**(iii)  Parameter update.** Update the parameters of the neural drift and diffusion functions  using an Adam-type optimizer.
 A pseudo-code of the SPF algorithm is provided below.
 |  Diagram of FB-MOAC algorithm |
 | :-------------------------:| 
